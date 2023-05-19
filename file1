@@ -1,0 +1,9 @@
+function validateEmail($email) {
+    $pattern = '/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/';
+    return preg_match($pattern, $email);
+}
+
+$email = 'test@example.com';
+$result = validateEmail($email);
+echo $result ? 'Valid' : 'Invalid';
+
